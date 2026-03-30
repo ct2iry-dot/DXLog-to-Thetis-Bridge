@@ -1,113 +1,132 @@
-# DXLog-to-Thetis-Bridge
-DXLog ↔ Thetis Bridge  
-A lightweight bridge application that connects DXLog with Thetis SDR software, 
-enabling seamless communication between logging software and SDR transceivers.
+DXLog ↔ Thetis Bridge
+
+
+
+![icon](https://github.com/user-attachments/assets/836cd542-bb17-40c4-b23e-3d938343b45e)
+
+
+
+
+
+
+
+
+A lightweight, high-performance bridge that connects DXLog with Thetis SDR, enabling real-time synchronization between logging software and SDR transceivers.
+
+
+📸 Screenshots
+
+
+<img width="898" height="651" alt="Screenshot 2026-03-30 172934" src="https://github.com/user-attachments/assets/a4ccf134-6c99-402b-8fe2-2ae2bbdd1551" />
+
 
 
 📡 Overview
 
-DXLog ↔ Thetis Bridge is designed to synchronize and relay data between DXLog (logging software) and Thetis (OpenHPSDR client).
+DXLog ↔ Thetis Bridge provides seamless communication between:
 
-It helps operators streamline their amateur radio workflow by automating key exchanges such as:
+📝 DXLog (contest logging software)
+📻 Thetis (OpenHPSDR SDR client)
 
-Frequency tracking
+It acts as a middleware layer, allowing both systems to stay synchronized in real time — improving efficiency for contesting, DXing, and SDR-based stations.
 
-Mode synchronization
-
-Band changes
-
-CAT/TCI data bridging (if enabled)
-
-
-
-⚙️ Features
-
-🔗 Real-time communication between DXLog and Thetis
-
-📻 Improved integration for SDR-based stations
-
-⚡ Low-latency data forwarding
-
-🧩 Easy configuration setup
-
-🪶 Lightweight and minimal system impact
-
-🛠 Optional advanced/pro features (if enabled)
-
-
-
-
+✨ Features
+🔗 Real-time frequency and mode synchronization
+📡 Band tracking between DXLog and Thetis
+⚡ Low-latency communication layer
+🧩 Simple and intuitive configuration
+🪶 Lightweight and efficient (minimal CPU usage)
+🛠 Optional advanced / Pro features support
+🔄 Designed for multi-instance SDR workflows
+🏗 Architecture
+DXLog  ⇄  Bridge  ⇄  Thetis
+          │
+          ├── CAT
+          ├── UDP
+          └── TCI (optional)
 🖥 Requirements
-
 Windows 10 / 11
-
-DXLog installed
-
-Thetis SDR software installed
-
-(Optional) Hermes-Lite 2 or compatible OpenHPSDR hardware
-
-
-
-
+DXLog installed and configured
+Thetis SDR software
+(Optional) Hermes Lite 2 or OpenHPSDR-compatible hardware
 🚀 Installation
-
-Download the latest release from Releases
-
+Option 1 — Installer
+Download the latest release from the Releases page
 Run the installer
+Launch the application
+Option 2 — Manual
+Clone the repository:
+git clone https://github.com/ct2iry-dot/dxlog-thetis-bridge.git
+Run the executable from /dist or build manually
+⚙️ Configuration
+DXLog
+Enable CAT or UDP output
+Set correct COM port / network settings
+Thetis
+Enable CAT or TCI interface
+Configure port matching the bridge
+Bridge
+Set:
+IP address (usually 127.0.0.1)
+Ports for DXLog and Thetis
+Protocol (CAT / TCI)
+🧪 Usage
+Start Thetis
+Start DXLog
+Launch DXLog ↔ Thetis Bridge
+Verify synchronization:
+Frequency changes
+Mode updates
+Band switching
+🧰 Development
+Build Requirements
+Python 3.x (if applicable)
+PyInstaller (if packaging to EXE)
+Inno Setup (for installer)
+Build EXE
+pyinstaller --onefile main.py
+🔄 Continuous Integration
 
-Configure DXLog and Thetis connection settings
+This project uses GitHub Actions for:
 
-Start the bridge application
+✅ Build validation
+✅ Packaging checks
+✅ Release automation (optional)
 
+Workflow file:
 
+.github/workflows/build.yml
+🗺 Roadmap
+ Improved TCI support
+ Advanced logging sync
+ GUI enhancements
+ Auto-discovery of services
+ Linux support (experimental)
+🤝 Contributing
 
+Contributions are welcome!
 
-🔧 Configuration
+Fork the project
+Create your feature branch
+Commit your changes
+Open a Pull Request
+🐛 Issues
 
-Make sure both applications are properly configured:
+Found a bug or want a feature?
 
-DXLog: Enable external CAT/UDP output if required
-
-Thetis: Enable TCI or CAT control depending on your setup
-
-Bridge: Set correct ports/IP addresses for communication
-
-
-
-
-📌 Use Cases
-
-Multi-band DXing setups
-
-SO2R / multi-instance logging
-
-FT8 / digital mode monitoring
-
-SDR-based contest stations
-
-
-
-
-🧪 Status
-
-⚠️ This project is under active development. Features may change between versions.
-
-
-
+👉 Open an issue:
+https://github.com/ct2iry-dot/dxlog-thetis-bridge/issues
 
 📄 License
 
-MIT License (or specify your license here)
-
-
-
+This project is licensed under the MIT License.
 
 👤 Author
 
-Developed by [Nuno Lopes / CT2IRY]
-
-
-
+CT2IRY
 
 GitHub: https://github.com/ct2iry-dot
+
+⭐ Support
+
+If you find this project useful, consider giving it a ⭐ on GitHub!
