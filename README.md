@@ -34,6 +34,9 @@ CAT/TCI data bridging (if enabled)
 
 🛠 Optional advanced/pro features (if enabled)
 
+
+
+
 🖥 Requirements
 
 Windows 10 / 11
@@ -43,6 +46,9 @@ DXLog installed
 Thetis SDR software installed
 
 (Optional) Hermes-Lite 2 or compatible OpenHPSDR hardware
+
+
+
 
 🚀 Installation
 
@@ -54,6 +60,9 @@ Configure DXLog and Thetis connection settings
 
 Start the bridge application
 
+
+
+
 🔧 Configuration
 
 Make sure both applications are properly configured:
@@ -63,6 +72,9 @@ DXLog: Enable external CAT/UDP output if required
 Thetis: Enable TCI or CAT control depending on your setup
 
 Bridge: Set correct ports/IP addresses for communication
+
+
+
 
 📌 Use Cases
 
@@ -74,16 +86,28 @@ FT8 / digital mode monitoring
 
 SDR-based contest stations
 
+
+
+
 🧪 Status
 
 ⚠️ This project is under active development. Features may change between versions.
+
+
+
 
 📄 License
 
 MIT License (or specify your license here)
 
+
+
+
 👤 Author
 
 Developed by [Nuno Lopes / CT2IRY]
+
+
+
 
 GitHub: https://github.com/ct2iry-dot
